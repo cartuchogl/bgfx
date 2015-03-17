@@ -317,13 +317,9 @@ namespace entry
 								if (isText)
 								{
 									m_eventQueue.postCharEvent(s_defaultWindow, 1, pressedChar);
-									return false;
 								}
-								else
-								{
-									m_eventQueue.postKeyEvent(s_defaultWindow, key, modifiers, true);
-									return false;
-								}
+								m_eventQueue.postKeyEvent(s_defaultWindow, key, modifiers, true);
+								return false;
 							}
 						}
 
